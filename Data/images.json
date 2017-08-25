@@ -1,0 +1,36 @@
+{
+  "suppliers": [
+    {
+      "firstName": "Kostas",
+      "lastName": "Grey",
+      "officeLocation": "Lawrence, KS",
+      "phoneNumber": "(372) 792-6728",
+      "email": "asd@asd.gr",
+      "latitude": "44.968046",
+      "longitude": "-94.420307",
+      "debt": "127",
+      "items": [
+        {
+          "src": "http://www.sencha.com/img/20110215-feat-drawing.png",
+          "caption": "Drawing & Charts"
+        },
+        {
+          "src": "http://www.sencha.com/img/20110215-feat-data.png",
+          "caption": "Drawing & Charts"
+        },
+        {
+          "src": "http://www.sencha.com/img/20110215-feat-drawing.png",
+          "caption": "Advanced Dat"
+        },
+        {
+          "src": "http://www.sencha.com/img/20110215-feat-html5.png",
+          "caption": "Overhauled Theme"
+        },
+        {
+          "src": "http://www.sencha.com/img/20110215-feat-perf.png",
+          "caption": "Performance Tuned"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+Ext.define('Suppliers.view.main.dataViewViewTest', {
+    extend: 'Ext.panel.Panel',
+    xtype: 'dataViewViewTest',
+    //controller: 'mainview',
+    //title: 'Update Record',
+
+    // floating: true,
+    // centered: true,
+    //modal: true,
+    items: [{
+        xtype: 'panel',
+        layout: 'fit',
+        alias:'widget.imageview',
+        id: 'images-view',
+        frame: true,
+        collapsible: true,
+        width: 1000,
+        //store: Ext.data.StoreManager.lookup('imagesStore'),
+        emptyText: 'No images available',
+        items: Ext.create('Ext.view.View', {
+            store: Ext.create('Suppliers.store.imagesStore'),
+
+            tpl: new Ext.XTemplate(
+                '<tpl for=".">',
+                '<div style="margin-bottom: 10px;" class="thumb-wrap">',
+                '<img src="{src}" />',
+                '<br/><span>{caption}</span>',
+                '</div>',
+                '</tpl>'),
+            itemSelector: 'div.thumb-wrap',
+            height: 500,
+            emptyText: 'No images available'
+        })
+    }]
+});
