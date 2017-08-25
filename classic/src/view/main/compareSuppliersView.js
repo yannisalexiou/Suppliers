@@ -233,7 +233,7 @@ Ext.define('Suppliers.view.main.compareSuppliersView', {
                     //store: Ext.create('Suppliers.store.SupplierChainedStore'),
 
                     store: {
-                        type: 'supplier',
+                        type: 'supplierChainedStore',
                         autoLoad: {start: 0, limit: 5},
                         sorters: [ 'firstName', 'lastName', 'phoneNumber'],
                         grouper: 'firstName'
