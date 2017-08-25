@@ -8,7 +8,7 @@ Ext.define('Suppliers.store.imagesStore', {
     autoLoad: true,
     proxy: {
         type: 'ajax',
-        url: 'data/SuppliersWithItems.json',
+        url: 'app/Data/SuppliersWithItems.json',
         // reader: {
         //     type: 'json',
         //     rootProperty: 'suppliers.items',

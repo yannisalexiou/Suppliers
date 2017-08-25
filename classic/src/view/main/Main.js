@@ -104,26 +104,26 @@ Ext.define('Suppliers.view.main.Main', {
     },
 
     items: [{
-        title: 'Overview',
-        iconCls: 'fa-home',
-        xtype: 'overviewView'
+            title: 'Overview',
+            iconCls: 'fa-home',
+            xtype: 'overviewView'
 
     }, {
-        title: 'Suppliers Database',
-        iconCls: 'x-fa fa-address-card -o',
-        autoScroll: true,
-        xtype: 'supplierDatabaseView'
+            title: 'Suppliers Database',
+            iconCls: 'x-fa fa-address-card -o',
+            autoScroll: true,
+            xtype: 'supplierDatabaseView'
 
     }, {
-        title: 'Supplier Debt Chart',
-        iconCls: 'fa-area-chart',
-        xtype: 'supplierDebtChartView',
+            title: 'Supplier Debt Chart',
+            iconCls: 'fa-area-chart',
+            xtype: 'supplierDebtChartView',
 
     }, {
-        title: 'Compare Suppliers',
-        iconCls: 'x-fa fa-balance-scale -o',
-        autoScroll: true,
-        xtype: 'compareSuppliersView'
+            title: 'Compare Suppliers',
+            iconCls: 'x-fa fa-balance-scale -o',
+            autoScroll: true,
+            xtype: 'compareSuppliersView'
     },
     //     {
     //     title: 'New Tab',
@@ -132,9 +132,19 @@ Ext.define('Suppliers.view.main.Main', {
     //     xtype: 'dataViewViewTest'
     // },
         {
-        title: 'Suppliers With Items',
-        iconCls: 'x-fa fa-shopping-cart -o',
-        autoScroll: true,
-        xtype: 'supplierWithItems'
-    }]
+            title: 'Suppliers With Items',
+            iconCls: 'x-fa fa-shopping-cart -o',
+            autoScroll: true,
+            xtype: 'supplierWithItems',
+    }, {
+            title: 'Customer - Orders',
+            iconCls: 'x-fa fa-shopping-basket -o',
+            autoScroll: true,
+            xtype: 'customerOrderView',
+    },{
+            title: 'Supplier - Items in One Grid',
+            iconCls: 'x-fa fa-shopping-basket -o',
+            autoScroll: true,
+            xtype: 'SupplierItemsOneGrid',
+        }]
 });

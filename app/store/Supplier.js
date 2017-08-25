@@ -18,7 +18,7 @@ Ext.define('Suppliers.store.Supplier', {
         autoSync:true,
         type: 'rest',
         //url: 'https://api.myjson.com/bins/mw4pn',
-        url: 'data/SuppliersWithItems.json',
+        url: '/app/Data/SuppliersWithItems.json',
         //url: 'https://api.myjson.com/bins/15rsaz',
         reader: {
             type: 'json',
