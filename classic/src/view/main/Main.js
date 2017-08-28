@@ -145,6 +145,6 @@ Ext.define('Suppliers.view.main.Main', {
             title: 'Supplier - Items in One Grid',
             iconCls: 'x-fa fa-shopping-basket -o',
             autoScroll: true,
-            xtype: 'SupplierItemsOneGrid',
+            xtype: 'SupplierItemsOneGrid'
         }]
 });

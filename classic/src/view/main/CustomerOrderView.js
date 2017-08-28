@@ -1,89 +1,94 @@
 Ext.define('Suppliers.view.main.customerOrderView', {
-    extend: 'Ext.grid.Panel',
+    extend: 'Ext.panel.Panel',
 
     xtype: 'customerOrderView',
 
-    title: "Master - Detail Grid",
+    items: [{
+        xtype: 'grid',
 
-    store: {
-        type: 'companies'
-    },
+        title: "Master - Detail Grid",
 
-    columns: [{
-        text: 'Id',
-        dataIndex: 'id'
-    },{
-        text: 'Name',
-        dataIndex: 'name',
-        flex: 1,
-        hideable: false
-    }, {
-        width: 140,
-        text: 'Phone',
-        dataIndex: 'phone'
-    }],
-    width: 750,
-    height: 450,
-    leadingBufferZone: 8,
-    trailingBufferZone: 8,
+        store: {
+            type: 'companies'
+        },
 
-    //<example>
-    otherContent: [{
-        type: 'Store',
-        path: 'app/store/Companies.js'
-    }, {
-        type: 'Model',
-        path: 'app/model/Company.js'
-    }, {
-        type: 'Model',
-        path: 'app/model/Order.js'
-    }],
-    //</example>
+        columns: [{
+            text: 'Id',
+            dataIndex: 'id'
+        },{
+            text: 'Name',
+            dataIndex: 'name',
+            flex: 1,
+            hideable: false
+        }, {
+            width: 140,
+            text: 'Phone',
+            dataIndex: 'phone'
+        }],
+        // width: 750,
+        // height: 450,
+        // leadingBufferZone: 8,
+        // trailingBufferZone: 8,
 
-    plugins: [{
-        ptype: 'rowwidget',
+        //<example>
+        otherContent: [{
+            type: 'Store',
+            path: 'app/store/Companies.js'
+        }, {
+            type: 'Model',
+            path: 'app/model/Company.js'
+        }, {
+            type: 'Model',
+            path: 'app/model/Order.js'
+        }],
+        //</example>
 
-        // The widget definition describes a widget to be rendered into the expansion row.
-        // It has access to the application's ViewModel hierarchy. Its immediate ViewModel
-        // contains a record and recordIndex property. These, or any property of the record
-        // (including association stores) may be bound to the widget.
-        //
-        // See the Order model definition with the association declared to Company.
-        // Every Company record will be decorated with an "orders" method which,
-        // when called yields a store containing associated orders.
-        widget: {
-            xtype: 'grid',
-            autoLoad: true,
-            bind: {
-                store: '{record.orders}',
-                title: 'Orders for {record.name}'
-            },
-            columns: [{
-                text: 'Order Id',
-                dataIndex: 'id',
-                width: 75
-            }, {
-                text: 'Procuct code',
-                dataIndex: 'productCode',
-                width: 265
-            }, {
-                text: 'Quantity',
-                dataIndex: 'quantity',
-                xtype: 'numbercolumn',
-                width: 100,
-                align: 'right'
-            }, {
-                xtype: 'datecolumn',
-                format: 'Y-m-d',
-                width: 120,
-                text: 'Date',
-                dataIndex: 'date'
-            }, {
-                text: 'Shipped',
-                xtype: 'checkcolumn',
-                dataIndex: 'shipped',
-                width: 75
-            }]
-        }
-    }],
+        plugins: [{
+            ptype: 'rowwidget',
+
+            // The widget definition describes a widget to be rendered into the expansion row.
+            // It has access to the application's ViewModel hierarchy. Its immediate ViewModel
+            // contains a record and recordIndex property. These, or any property of the record
+            // (including association stores) may be bound to the widget.
+            //
+            // See the Order model definition with the association declared to Company.
+            // Every Company record will be decorated with an "orders" method which,
+            // when called yields a store containing associated orders.
+            widget: {
+                xtype: 'grid',
+                autoLoad: true,
+                bind: {
+                    store: '{record.orders}',
+                    title: 'Orders for {record.name}'
+                },
+                columns: [{
+                    text: 'Order Id',
+                    dataIndex: 'id',
+                    flex: 1
+                }, {
+                    text: 'Procuct code',
+                    dataIndex: 'productCode',
+                    flex: 1
+                }, {
+                    text: 'Quantity',
+                    dataIndex: 'quantity',
+                    xtype: 'numbercolumn',
+                    flex: 1,
+                    align: 'right'
+                }, {
+                    xtype: 'datecolumn',
+                    format: 'Y-m-d',
+                    flex: 1,
+                    text: 'Date',
+                    dataIndex: 'date'
+                }, {
+                    text: 'Shipped',
+                    xtype: 'checkcolumn',
+                    dataIndex: 'shipped',
+                    flex: 1
+                }]
+            }
+        }]
+
+    }]
 });

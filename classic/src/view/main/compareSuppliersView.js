@@ -153,7 +153,7 @@ Ext.define('Suppliers.view.main.compareSuppliersView', {
                 }, {
                     xtype: 'form',
                     itemId: 'moreInfo',
-                    reference: 'moreInfoReference',
+                    reference: 'mainGrid',
 
                     width: '50%',
                     height: 350,
@@ -166,38 +166,38 @@ Ext.define('Suppliers.view.main.compareSuppliersView', {
 
                     title: 'More Info ',
                     bind : {
-                        title: '{mainGrid.selection.firstName} {mainGrid.selection.lastName}, {mainGrid.selection.debt}€'
+                        title: '{mainGridRecord.firstName} {mainGridRecord.lastName}, {mainGridRecord.debt}€'
                     },
 
 
                     defaultType: 'textfield',
                     items: [{
                         fieldLabel: 'First Name',
-                        bind: '{mainGrid.selection.firstName}',
+                        bind: '{mainGridRecord.firstName}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Last Name',
-                        bind: '{mainGrid.selection.lastName}',
+                        bind: '{mainGridRecord.lastName}',
                         allowBlank: false
                     }, {
                         fieldLabel: 'Office Location',
-                        bind: '{mainGrid.selection.officeLocation}',
+                        bind: '{mainGridRecord.officeLocation}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Phone Number',
-                        bind: '{mainGrid.selection.phoneNumber}',
+                        bind: '{mainGridRecord.phoneNumber}',
                         allowBlank: false
                     }, {
                         fieldLabel: 'Email',
-                        bind: '{mainGrid.selection.email}',
+                        bind: '{mainGridRecord.email}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Latitude',
-                        bind: '{mainGrid.selection.latitude}',
+                        bind: '{mainGridRecord.latitude}',
                         allowBlank: true
                     }, {
                         fieldLabel: 'Longitude',
-                        bind: '{mainGrid.selection.longitude}',
+                        bind: '{mainGridRecord.longitude}',
                         allowBlank: true
                     }],
                 }
@@ -312,38 +312,38 @@ Ext.define('Suppliers.view.main.compareSuppliersView', {
 
                     title: 'More Info ',
                     bind : {
-                        title: '{secondaryGrid.selection.firstName} {secondaryGrid.selection.lastName}, {secondaryGrid.selection.debt}€'
+                        title: '{secondGridRecord.firstName} {secondGridRecord.lastName}, {secondGridRecord.debt}€'
                     },
 
 
                     defaultType: 'textfield',
                     items: [{
                         fieldLabel: 'First Name',
-                        bind: '{secondaryGrid.selection.firstName}',
+                        bind: '{secondGridRecord.firstName}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Last Name',
-                        bind: '{secondaryGrid.selection.lastName}',
+                        bind: '{secondGridRecord.lastName}',
                         allowBlank: false
                     }, {
                         fieldLabel: 'Office Location',
-                        bind: '{secondaryGrid.selection.officeLocation}',
+                        bind: '{secondGridRecord.officeLocation}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Phone Number',
-                        bind: '{secondaryGrid.selection.phoneNumber}',
+                        bind: '{secondGridRecord.phoneNumber}',
                         allowBlank: false
                     }, {
                         fieldLabel: 'Email',
-                        bind: '{secondaryGrid.selection.email}',
+                        bind: '{secondGridRecord.email}',
                         allowBlank: false
                     },{
                         fieldLabel: 'Latitude',
-                        bind: '{secondaryGrid.selection.latitude}',
+                        bind: '{secondGridRecord.latitude}',
                         allowBlank: true
                     }, {
                         fieldLabel: 'Longitude',
-                        bind: '{secondaryGrid.selection.longitude}',
+                        bind: '{secondGridRecord.longitude}',
                         allowBlank: true
                     }],
                 }
