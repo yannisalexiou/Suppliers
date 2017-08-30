@@ -17,6 +17,7 @@ Ext.define('Suppliers.view.main.MainModel', {
 
     formulas : {
 
+        // We need to bind deep to be notified on each model change
         overviewGridRecord: {
             bind: {
                 bindTo: '{overviewGrid.selection}',
